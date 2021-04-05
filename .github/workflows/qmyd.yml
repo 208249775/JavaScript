@@ -49,7 +49,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/208249775/AutoSyncScript.git ~/AutoSyncScript
+          git clone https://github.com/208249775/JavaScript.git ~/JavaScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -57,13 +57,13 @@ jobs:
       - name: npm install
         if: env.QMYD_qmydTOKEN
         run: |
-          cd ~/AutoSyncScript
+          cd ~/JavaScript
           git checkout ZIYE
           npm install
       - name: '运行 【全民悦动】'
         if: env.QMYD_qmydTOKEN
         run: |
-          cd ~/AutoSyncScript
+          cd ~/JavaScript
           node Task/qmyd.js
         env:
           
