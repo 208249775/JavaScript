@@ -58,7 +58,7 @@ jobs:
         if: env.BBB_bububaoTOKEN
         run: |
           cd ~/JavaScript
-          git checkout ZIYE
+          git checkout master
           npm install
       - name: '运行 【步步宝】'
         if: env.BBB_bububaoTOKEN
